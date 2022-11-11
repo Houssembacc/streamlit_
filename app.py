@@ -155,7 +155,7 @@ def preprocess_text(text):
 print('The scikit-learn version is {}.'.format(sklearn.__version__))
 import pickle
 
-file_name = "C:/Users/Houssem Baccouche/streamlit/vectorizer.bin"
+file_name = "vectorizer.bin"
 with (open(file_name, "rb")) as f:
     while True:
         try:
@@ -164,7 +164,7 @@ with (open(file_name, "rb")) as f:
             break
 print(vectorizer)
 
-file_name2 = "C:/Users/Houssem Baccouche/Desktop/model_nmf.bin"
+file_name2 = "model_nmf.bin"
 with (open(file_name2, "rb")) as f:
     while True:
         try:
