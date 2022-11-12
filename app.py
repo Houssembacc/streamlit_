@@ -116,7 +116,6 @@ def preprocess_text(text):
     return text
 
 
-"""## Jalon 3"""
 print('The scikit-learn version is {}.'.format(sklearn.__version__))
 import pickle
 
