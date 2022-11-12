@@ -223,6 +223,6 @@ if st.button("Detecter le sujet d'insatisfaction"):
         st.write('Topics are :',l)
     if (p>0):
         st.write('Cet avis est positif !')
-    if (p=0):
+    if (p==0):
         st.write('Cet avis est neutre !')
         
