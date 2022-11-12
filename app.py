@@ -218,5 +218,11 @@ number = st.number_input('Insert a number of topics',min_value=1,max_value=15,st
 #st.write('The current number is ', number)
 if st.button("Detecter le sujet d'insatisfaction"):
     p,l=prediction_text(vectorizer, nmf_model, number, text_value)
-    st.write('Polarity is:',p)
-    st.write('Topics are :',l)
+    if (p<0):  
+        st.write('NEG:',p)
+        st.write('Topics are :',l)
+    if (p>0):
+        st.write('Cet avis est positif !')
+    if (p=0):
+        st.write('Cet avis est neutre !')
+        
