@@ -217,15 +217,6 @@ st.image(image, caption='')
 text_value= st.text_input("Entrez un texte:")
 number = st.number_input('Insert a number of topics',min_value=1,max_value=15,step=1)
 #st.write('The current number is ', number)
-genre = st.sidebar.radio(
-    "Quel Texte Analyser ?",
-    ('Avis dataset', 'Texte Libre'))
-
-if genre == 'Avis dataset':
-    st.write('You selected comedy.')
-else:
-    st.write("You didn't select comedy.")
-
 if st.button("Detecter le sujet d'insatisfaction"):
     p,l=prediction_text(vectorizer, nmf_model, number, text_value)
     st.write('Polarity is:',p)
