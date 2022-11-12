@@ -207,18 +207,13 @@ def prediction_text(vectorizer, nmf_model, n_topic, text):
 
     return polarity, idx_l
 
+######################################################### Partie Streamlit (Front) ##################################################
+from PIL import Image
 
-# p,l=prediction_text(vectorizer,nmf_model,2,"I am bad")
-# print("Polarity:", p)
-# print("Topics are:", l)
+st.title("Detection de sujet d'insatisfaction !")
+image = Image.open('étapes.png')
 
-
-# categories_count = ['1', '2', '3']
-# chosen_count = st.selectbox(
-#     'Choisir le nombre de topic !',
-#     categories_count
-# )
-
+st.image(image, caption='')
 text_value= st.text_input("Entrez un texte:")
 number = st.number_input('Insert a number of topics',min_value=1,max_value=15,step=1)
 #st.write('The current number is ', number)
